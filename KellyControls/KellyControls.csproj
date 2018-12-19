@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E14C692-C4BD-4DF1-B649-6B390CBFDF53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KellyControls</RootNamespace>
+    <AssemblyName>KellyControls</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorBox\ColorBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorBox\ColorBox.Designer.cs">
+      <DependentUpon>ColorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorDropDown\ColorDropDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorDropDown\ColorDropDown.Designer.cs">
+      <DependentUpon>ColorDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorGrid\ColorGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorGrid\ColorGrid.Designer.cs">
+      <DependentUpon>ColorGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPanel\ColorPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPicker.Designer.cs">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorSelector\ColorSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorSelector\ColorSelector.designer.cs">
+      <DependentUpon>ColorSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorWheel\ColorWheel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorWheel\ColorWheel.Designer.cs">
+      <DependentUpon>ColorWheel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonClasses\CustomCursors.cs" />
+    <Compile Include="CommonClasses\ColorManager.cs" />
+    <Compile Include="CommonClasses\CMYK.cs" />
+    <Compile Include="CommonClasses\DrawingControl.cs" />
+    <Compile Include="CommonClasses\HSL.cs" />
+    <Compile Include="CommonClasses\LockBitmap.cs" />
+    <Compile Include="CommonClasses\MRU.cs" />
+    <Compile Include="CommonClasses\NamedColor.cs" />
+    <Compile Include="ColorList\ColorItem.cs" />
+    <Compile Include="ColorList\ColorList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonClasses\NamedColorEnum.cs" />
+    <Compile Include="CommonClasses\NamedColorListTypeConverter.cs" />
+    <Compile Include="CommonClasses\NamedColorTypeConverter.cs" />
+    <Compile Include="CommonClasses\Palette.cs" />
+    <Compile Include="CommonClasses\ImageController.cs" />
+    <Compile Include="CommonClasses\Registry.cs" />
+    <Compile Include="CommonClasses\QColorMatrix.cs" />
+    <Compile Include="DropDownControl\DropDownControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropDownControl\DropDownControl.Designer.cs">
+      <DependentUpon>DropDownControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GhostedTextBox\GhostedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HSLSlider\HSLSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HSLSlider\HSLSlider.Designer.cs">
+      <DependentUpon>HSLSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageDropDown\ImageDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageDropDown\ImageListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageDropDown\ImageListItem.cs" />
+    <Compile Include="MultiSelectTreeview\MultiSelectTreeview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanelScroll\PanelScroll.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlugInToolBtn\Interfaces\IPlugInToolGroup.cs" />
+    <Compile Include="PlugInToolBtn\Interfaces\IPlugInTool.cs" />
+    <Compile Include="PlugInToolBtn\Interfaces\IItem.cs" />
+    <Compile Include="PlugInToolBtn\PlugInTool.cs" />
+    <Compile Include="PlugInToolBtn\ToolStripForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlugInToolBtn\PlugInToolGroup.cs" />
+    <Compile Include="PlugInToolBtn\PlugInToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlugInToolBtn\ToolGroups\ToolGroup Class Attribute.cs" />
+    <Compile Include="PlugInToolBtn\ToolGroups\BaseToolGroup.cs" />
+    <Compile Include="PlugInToolBtn\Tools\BaseTool.cs" />
+    <Compile Include="PlugInToolBtn\Tools\Tool Class Attribute.cs" />
+    <Compile Include="PlugInToolBtn\Tools_ToolStripContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlugInToolBtn\Tools_ToolStripContainer.Designer.cs">
+      <DependentUpon>Tools_ToolStripContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RichTextBoxPrintCtrl\RichTextBoxPrintCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SelectColorDialog\SelectColorDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SelectColorDialog\SelectColorDialog.Designer.cs">
+      <DependentUpon>SelectColorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectColorDialog\SelectColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectColorDialog\SelectColorForm.Designer.cs">
+      <DependentUpon>SelectColorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeViewScroll\TreeNode.cs" />
+    <Compile Include="TreeViewScroll\TreeViewScroll.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonClasses\Disposable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes.txt" />
+    <None Include="Resources\flyout.png" />
+    <None Include="Resources\annotation_flyout.png" />
+    <None Include="Resources\undefined.png" />
+    <Content Include="RichTextBoxPrintCtrl\RichTextBoxPrintCtrl.bmp" />
+    <Content Include="SelectColorDialog\SelectColorDialog.bmp" />
+    <Content Include="TreeViewScroll\TreeViewScroll.bmp" />
+    <None Include="Resources\ghost_textbox.bmp" />
+    <Content Include="ColorBox\ColorBox.bmp" />
+    <Content Include="ColorDropDown\ColorDropDown.bmp" />
+    <Content Include="ColorGrid\ColorGrid.bmp" />
+    <Content Include="ColorList\ColorList.bmp" />
+    <Content Include="ColorPanel\ColorPanel.bmp" />
+    <Content Include="ColorPicker\ColorPicker.bmp" />
+    <Content Include="ColorSelector\ColorSelector.bmp" />
+    <Content Include="ColorWheel\ColorWheel.bmp" />
+    <Content Include="DropDownControl\DropDownControl.bmp" />
+    <Content Include="GhostedTextBox\GhostedTextBox.bmp" />
+    <Content Include="HSLSlider\HSLSlider.bmp" />
+    <Content Include="ImageDropDown\ImageDropDown.bmp" />
+    <Content Include="ImageDropDown\ImageListBox.bmp" />
+    <Content Include="Resources\Icons\color_box.ico" />
+    <Content Include="Resources\Icons\color_circle.ico" />
+    <None Include="Resources\image_listbox.bmp" />
+    <None Include="Resources\image_dropdown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColorPicker\ColorPicker.resx">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorSelector\ColorSelector.resx">
+      <DependentUpon>ColorSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorWheel\ColorWheel.resx">
+      <DependentUpon>ColorWheel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HSLSlider\HSLSlider.resx">
+      <DependentUpon>HSLSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlugInToolBtn\Tools_ToolStripContainer.resx">
+      <DependentUpon>Tools_ToolStripContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\color_grid.bmp" />
+    <EmbeddedResource Include="ColorList\ColorList.resx">
+      <DependentUpon>ColorList.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\color_list.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\annotation_not.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_box.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_dropdown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_panel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_picker.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_selector.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_wheel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dropdown_control.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hsl_slider.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_color_dialog.bmp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

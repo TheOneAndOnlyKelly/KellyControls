@@ -1,0 +1,34 @@
+﻿Isolated Controls (Not dependant on other controls)
+
+ok - GhostedTextBox - Extends TextBox, shows a ghosted default value
+ok - RichTextBoxPrintCtrl - Extends RichTextBox, adds a Print method
+ok - TreeViewScroll - Extends TreeViewScroll, adding control for scrolling
+ok - 	TreeNode - Extends TreeNode, adding an Attribute property
+ok - ImageDropDown - Extends ComboBox, DrawMode is OwnerDrawVariable, draws bitmaps on the items 
+ok - ImageListBox - Extends ListBox, DrawMode is OwnerDrawVariable, draws bitmaps on the items 
+ok - 	ImageListItem - class used by both, holds the bitmap, along with the key and value and a Tag property
+ok - HSLSlider - Custom control that draws a Hue, Saturation, & Lightness set of sliders
+ok - ColorBox - Provides a interface to edit color values
+
+-------------------------------------------------------------------
+Combined Controls (Related to each other)
+
+DropDownControl - Custom drop down control
+ok - ColorPanel - Extends Label, fills its area with the color from its Color property 
+ColorWheel - Custom control, draws a color wheel, responds to mouse input, choosing colors based on the angle of the inner triangle
+ColorList  - Custom control, contains a listbox that draws boxes of colors
+
+ColorPicker - Composite control, contains ColorWheel & ColorPanel
+ColorGrid - Composite control, draws a grid of color boxes, uses the control SelectColorDialog to add new colors
+SelectColorDialog - Composite control, uses ColorWheel & ColorPanel & ColorGrid. Possible circular reference as ColorGrid uses SelectColorDialog...
+ColorDropDown - Extends DropDownControl, uses ColorPanel & ColorPanel, drops down this area
+ColorSelector - Extends DropDownControl, uses Color List
+
+
+
+
+
+
+
+
+
